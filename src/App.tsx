@@ -1,5 +1,5 @@
 import { Container, Sprite, Stage, useTick } from '@inlet/react-pixi';
-import React, { useMemo, useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useImmer } from 'use-immer';
 
 const Bunny = () => {
@@ -22,8 +22,8 @@ const Bunny = () => {
 
   return (
     <Sprite
-      anchor={0.5}
       {...motion}
+      anchor={0.5}
       image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
     />
   );

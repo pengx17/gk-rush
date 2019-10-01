@@ -9,7 +9,7 @@
     "start": "yarn parcel -p 2333 watch src/index.html"
   },
   "dependencies": {
-    "@inlet/react-pixi": "^1.1.1",
+    "@inlet/react-pixi": "^1.1.2",
     "immer": "^4.0.0",
     "pixi.js": "^5.1.5",
     "react": "^16.10.1",
