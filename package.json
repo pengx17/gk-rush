@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@inlet/react-pixi": "^1.1.1",
+    "immer": "^4.0.0",
     "pixi.js": "^5.1.5",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react-dom": "^16.10.1",
+    "use-immer": "^0.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

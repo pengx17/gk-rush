@@ -1,32 +1,30 @@
 import { Container, Sprite, Stage, useTick } from '@inlet/react-pixi';
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState, useRef } from 'react';
+import { useImmer } from 'use-immer';
 
 const Bunny = () => {
-  // states
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
-  const [rotation, setRotation] = useState(0);
-
-  const [i, setI] = useState(0);
+  const [motion, setMotion] = useImmer({
+    x: 0,
+    y: 0,
+    rotation: 0
+  });
+  const iRef = useRef(0);
 
   // custom ticker
   useTick(delta => {
-    setI(_i => _i + 0.05 * delta);
+    const i = (iRef.current += 0.05 * delta);
+    setMotion(draft => {
+      draft.x = Math.sin(i) * 100;
+      draft.y = Math.sin(i / 1.5) * 100;
+      draft.rotation = -10 + Math.sin(i / 10 + Math.PI * 2) * 10;
+    });
   });
-
-  useEffect(() => {
-    setX(Math.sin(i) * 100);
-    setY(Math.sin(i / 1.5) * 100);
-    setRotation(-10 + Math.sin(i / 10 + Math.PI * 2) * 10);
-  }, [i]);
 
   return (
     <Sprite
+      anchor={0.5}
+      {...motion}
       image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
-      anchor={[0.5, 0.5]}
-      x={x}
-      y={y}
-      rotation={rotation}
     />
   );
 };
