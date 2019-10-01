@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "outDir": "./ts-dist",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "target": "esnext",
+    "noErrorTruncation": true,
+    "resolveJsonModule": true,
+    "module": "es2015"
+  }
+}
