@@ -1,3 +1,4 @@
 import React from 'react';
+import { Board } from './board/Board';
 
-export const App = () => <div>Hello World!</div>;
+export const App = () => <Board />;
