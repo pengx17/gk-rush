@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:pengx17/gk-rush.git",
-  "author": "Peng Xiao <pengxiao@freewheel.tv>",
+  "author": "Peng Xiao <pengxiao@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn parcel -p 2333 watch src/index.html"
+    "start": "yarn parcel -p 2333 watch src/index.html",
+    "build": "yarn parcel build src/index.html"
   },
   "dependencies": {
-    "@inlet/react-pixi": "^1.1.2",
     "immer": "^4.0.0",
-    "pixi.js": "^5.1.5",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "use-immer": "^0.3.4"
@@ -38,8 +37,5 @@
   "prettier": {
     "singleQuote": true,
     "bracketSpacing": true
-  },
-  "alias": {
-    "@inlet/react-pixi": "./node_modules/@inlet/react-pixi/dist/react-pixi.module-dev.js"
   }
 }
