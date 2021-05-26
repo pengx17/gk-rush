@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.21",
-    "immer": "^4.0.0",
+    "immer": "^8.0.1",
     "lodash-es": "^4.17.15",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
